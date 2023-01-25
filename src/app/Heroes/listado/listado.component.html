@@ -1,0 +1,27 @@
+<p>Listado</p>
+
+<!-- Tambien se le puede dejar la condicional del *ngIf solo con la variable dependiendo la logia de la condicion -->
+<!-- <p *ngIf="heroeBorrado !== ''">Heroe Borrado:
+    <span>
+        {{heroeBorrado}}
+    </span>
+</p> -->
+
+<p *ngIf="heroeBorrado; else noBorrado">Heroe Borrado:
+    <span>
+        {{heroeBorrado}}
+    </span>
+</p>
+
+<ng-template #noBorrado>
+    <h3>No ah borrado nada.</h3>
+</ng-template>
+
+
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+<ul *ngFor="let heroe of Heroes; let i = index;">
+    <li>{{ i + 1}} {{heroe}}</li>
+</ul>
