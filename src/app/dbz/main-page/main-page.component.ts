@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interface/personaje.interface';
+import { PersonajesComponent } from '../personajes/personajes.component';
 
 
 @Component({
@@ -20,25 +21,19 @@ export class MainPageComponent {
     }
   ];
 
-  nuevo: Personaje = {
-    nombre: '',
-    poder: 0
-  }
-
   // cambiarNombre(event: any){
   //   console.log(event)
   // }
 
-  agregar(){
-    if(this.nuevo.nombre.trim().length === 0){
-      return 
-    }
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
+  nuevo: Personaje = {
+    nombre: 'Roshy',
+    poder: 10000
   }
+
+  agregarNuevopersonaje(arg: Personaje){
+    console.log(arg);
+    this.personajes.push(arg);
+  }
+  
 }
   
