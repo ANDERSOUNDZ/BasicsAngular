@@ -4,15 +4,19 @@
 <div class="row">
     <div class="col">
         <!-- Esta manera se permite ingresar informacion del padre al hijo -->
-        <app-personajes [personajes]="personajes">            
-        </app-personajes>
+        <!-- <app-personajes [personajes]="personajes">            
+        </app-personajes> -->
+        <app-personajes></app-personajes>
     </div>
 
     <div class="col">
-        <app-agregar 
+        <!-- <app-agregar 
             [nuevo]="nuevo"
             (onNuevopersonaje)="agregarNuevopersonaje($event)"        
-        >            
+        > -->
+        <app-agregar 
+            [nuevo]="nuevo"
+        >          
         </app-agregar>
     </div>
 </div>
